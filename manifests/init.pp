@@ -2,6 +2,7 @@
 #
 class slacktee (
     $default_username = "${::fqdn}",
+    $default_channel = "#general",
     $webhook_uri,
     $upload_token = undef,
     $proxy = false,
