@@ -1,11 +1,12 @@
 # Class: slacktee
 #
 class slacktee (
-  $webhook_uri,
-  $upload_token = undef,
-  $proxy = false,
-  $proxy_url = undef,
-  ){
+    $default_username = "${::fqdn}",
+    $webhook_uri,
+    $upload_token = undef,
+    $proxy = false,
+    $proxy_url = undef,
+){
     if $proxy == true {
       $webhook_url = "${proxy_url}/${webhook_uri}"
     } else {
