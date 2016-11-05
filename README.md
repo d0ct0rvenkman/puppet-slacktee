@@ -9,7 +9,7 @@ Deploys the amazing and wonderful [slacktee](https://github.com/course-hero/slac
   * `webhook_uri` (required) - The non-domain part of the slack webhook URL.
   * `default_username` - The default username from which slack messages come from. This can be overridden when slacktee is invoked at the command line. This defaults to the contents of the `fqdn` fact.
   * `default_channel` - The default channel where messages are sent. This can be overrideen when slacktee is invoked from the command line. This defaults to "#general".
-  * `default_icon` - The default icon displayed for each message. this defaults to "robot_face".
+  * `default_icon` - The default icon displayed for each message. This defaults to "robot_face", and can be overridden.
   * `upload_token` - Slack upload token for use with uploading files.
   * `proxy` - Boolean setting that dictates whether you want to submit slack messages to a custom proxy-pass URL. Useful for machines without direct external access. This defaults to `false`.
   * `proxy_url` - Protocol/domain name part for the proxy-pass URL.
