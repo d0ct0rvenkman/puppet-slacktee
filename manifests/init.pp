@@ -2,7 +2,8 @@
 #
 class slacktee (
     $default_username = "${::fqdn}",
-    $default_channel = "#general",
+    $default_channel = '#general',
+    $default_icon = 'robot_face',
     $webhook_uri,
     $upload_token = undef,
     $proxy = false,
@@ -16,10 +17,10 @@ class slacktee (
 
     case  "${::osfamily}-${::operatingsystemmajrelease}" {
         'RedHat-5': {
-            $sourcefile = "slacktee.el5.sh"
+            $sourcefile = 'slacktee.el5.sh'
         }
         default: {
-            $sourcefile = "slacktee.sh"
+            $sourcefile = 'slacktee.sh'
         }
     }
     file { '/usr/local/bin/slacktee':
