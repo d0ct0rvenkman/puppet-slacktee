@@ -15,6 +15,8 @@ class slacktee (
       $webhook_url = "https://hooks.slack.com/${webhook_uri}"
     }
 
+    ensure_packages(['curl'])
+
     case  "${::osfamily}-${::operatingsystemmajrelease}" {
         'RedHat-5': {
             $sourcefile = 'slacktee.el5.sh'
