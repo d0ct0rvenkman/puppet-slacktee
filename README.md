@@ -42,7 +42,6 @@ slacktee::default_icon: "lonely_robot_face"
 ```
 
 ## Caveats / Notices
-* This has only been tested on Puppet 3.8.
 * This has only been tested on CentOS 5-7 and Raspbian Jessie.
 * CentOS 5's version of curl does not support the `--data-urlencode` flag, so only `--data` is used. It may get ugly if your message contains character sequences that would be escaped by `--data-urlencode`.
 * When using the proxy option, the `slacktee` class sets an alternate config file for curl that disables certificate validation. Future revisions may make this a configurable setting.
